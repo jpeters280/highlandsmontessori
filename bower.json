@@ -1,0 +1,13 @@
+{
+  "name": "",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Joshua Peters <jpeters280@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jpeters280/highlandsmontessori",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
