@@ -23,3 +23,8 @@ body {
 .page-row-expanded { 
 	height: 100%; 
 }
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
