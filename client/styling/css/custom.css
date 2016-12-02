@@ -1,14 +1,14 @@
 .colorfy, .navbar-inverse, .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a, .navbar-inverse .navbar-nav .open .dropdown-menu {
-    background-color: #C7F464;
+    background-color: #4ECDC4;
     color: #000080;
   }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover{
-    background-color: #4ECDC4;
+    background-color: #C7F464;
     color: #000080;
 }
 h3 ,.navbar-inverse .navbar-brand{
-  color: #C44D58;
+  color: #556270;
 }
 p{
   color: #556270;
