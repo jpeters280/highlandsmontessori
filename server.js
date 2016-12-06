@@ -4,8 +4,6 @@ var express  	= require( 'express' ), // this loads the express code from node-m
     port     	= process.env.PORT || 8000, // this sets up my local host server port to 8000
     bp       	= require('body-parser'), // loaded from node-modules folder so that I can parse http requests
     app      	= express(); // creates an express application object, with all the methods and attributes attached.
-    // jQuery		= require('jquery')
-    // bootstrap 	= require('bootstrap')
 
 app.use( express.static( path.join( root, 'client' ))); // this tells the application that the static files are in ./client
 app.use( express.static( path.join( root, 'node_modules' ))); // other static files in ./bower_components
