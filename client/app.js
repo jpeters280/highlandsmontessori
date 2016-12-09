@@ -60,4 +60,8 @@ app.config(function ($routeProvider) {
     .otherwise({
         redirectTo: '/'
     });
+
+    
 });
+
+    
