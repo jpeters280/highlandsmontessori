@@ -1,9 +1,10 @@
-var express  	= require( 'express' ), // this loads the express code from node-modules folder
-    path     	= require( 'path' ), // this should come as a default from express
-    root     	= __dirname, // this sets up my root variable as my current directory name
-    port     	= process.env.PORT || 8000, // this sets up my local host server port to 8000
-    bp       	= require('body-parser'), // loaded from node-modules folder so that I can parse http requests
-    app      	= express(); // creates an express application object, with all the methods and attributes attached.
+var express  		= require( 'express' ), // this loads the express code from node-modules folder
+    path     		= require( 'path' ), // this should come as a default from express
+    root     		= __dirname, // this sets up my root variable as my current directory name
+    port     		= process.env.PORT || 8000, // this sets up my local host server port to 8000
+    bp       		= require('body-parser'), // loaded from node-modules folder so that I can parse http requests
+    app      		= express(); // creates an express application object, with all the methods and attributes attached.
+
 
 app.use( express.static( path.join( root, 'client' ))); // this tells the application that the static files are in ./client
 app.use( express.static( path.join( root, 'node_modules' ))); // other static files in ./bower_components

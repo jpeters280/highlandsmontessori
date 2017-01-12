@@ -1,4 +1,4 @@
-app.controller('showController', ['$scope','friendsFactory', '$location', '$routeParams', function($scope, friendsFactory, $location, routeParams) {
+app.controller('friendShowController', ['$scope','friendsFactory', '$location', '$routeParams', function($scope, friendsFactory, $location, routeParams) {
 
     $scope.show = function(){
         friendsFactory.getOneFriend(routeParams.id, function(data){

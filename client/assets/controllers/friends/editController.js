@@ -1,4 +1,4 @@
-app.controller('editController', ['$scope','friendsFactory', '$location', '$routeParams', function($scope, friendsFactory, $location, routeParams) {
+app.controller('friendEditController', ['$scope','friendsFactory', '$location', '$routeParams', function($scope, friendsFactory, $location, routeParams) {
 
     $scope.update = function(){
         friendsFactory.updateFriend(routeParams.id, $scope.friend, function(data){

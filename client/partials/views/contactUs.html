@@ -11,7 +11,7 @@
 		</div>
 		<div class="col-md-1 col-xs-0"></div>
 	</div>
-	<form>
+	<!-- <form>
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="form-group">
@@ -57,5 +57,42 @@
 				<button type="submit" class="btn btn-default">Submit</button>
 			</div>
 		</div>
-	</form>
+	</form> -->
+
+<div id="messages" class="well" ng-show="message">{{ message }}</div>
+<form ng-submit="processForm()">
+    <div class="input-prepend" ng-class="{ 'has-error' : errorName }">
+        <span class="add-on"><i class="icon-user"></i></span>
+        <input name="name" class="span4" id="name" size="16" type="text" placeholder="Name" ng-model="formData.name">             
+    </div>
+      <span class="help-block" ng-show="errorName">{{ errorName }}</span>
+    <div class="input-prepend" ng-class="{ 'has-error' : errorEmail }">
+        <span class="add-on"><i class="icon-envelope"></i></span>
+        <input name="email" class="span4" id="email" size="16" type="email" placeholder="Email Address" ng-model="formData.email">
+    </div>
+         <span class="help-block" ng-show="errorEmail">{{ errorEmail }}</span>
+   <div class="input-prepend" ng-class="{ 'has-error' : errorPhone }">
+        <span class="add-on"><i class="icon-envelope"></i></span>
+        <input name="phone" class="span4" id="phone" size="16" type="text" placeholder="Mobile Number" ng-model="formData.phone" onkeypress='validate(event)'>
+    </div>
+         <span class="help-block" ng-show="errorPhone">{{ errorPhone }}</span>
+    <div class="input-prepend" ng-class="{ 'has-error' : errorSubject }">
+        <span class="add-on"><i class="icon-globe"></i></span>
+        <input name="sub" class="span4" id="prependedInput" size="16" type="text" placeholder="Subject" ng-model="formData.sub">
+    </div>
+         <span class="help-block" ng-show="errorSubject">{{ errorSubject }}</span>
+    <textarea class="span6" name="message" id="message" ng-model="formData.msg"></textarea>
+    <span class="help-block" ng-show="errorMessage">{{ errorMessage }}</span>
+    <div class="row">
+        <div class="span2">
+            <input id="submit_btn" type="submit" class="btn btn-inverse" value="Send Message" >
+        </div>
+    </div>
+</form>
+	
 </div>
+
+
+
+
+
