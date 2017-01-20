@@ -8,8 +8,11 @@ app.config(function ($routeProvider) {
     .when('/', {
         templateUrl: '/partials/views/home.html'
     })
-    .when('/aboutus', {
-        templateUrl: '/partials/views/aboutUs.html'
+    .when('/philosophy', {
+        templateUrl: '/partials/views/philosophy.html'
+    })
+    .when('/ourStaff', {
+        templateUrl: '/partials/views/ourStaff.html'
     })
     .when('/developmentalreadiness', {
         templateUrl: '/partials/views/developmentalReadiness.html'
@@ -28,6 +31,9 @@ app.config(function ($routeProvider) {
     })
     .when('/formsresources', {
         templateUrl: '/partials/views/formsResources.html'
+    })
+    .when('/curriculum', {
+        templateUrl: '/partials/views/curriculum.html'
     })
     .when('/contactus', {
         templateUrl: '/partials/views/contactUs.html'

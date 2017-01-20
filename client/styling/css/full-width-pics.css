@@ -15,11 +15,14 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    filter: grayscale(50%);
 }
 
 .image-bg-fluid-height {
-	background: url('./../../../images/alphabetMat.jpeg') no-repeat center center scroll;
-    padding: 100px 0;
+	background: url('./../../../images/rrrr.jpg') no-repeat center center scroll;
+    padding: 200px 0;
 }
 
 .image-bg-fixed-height {
