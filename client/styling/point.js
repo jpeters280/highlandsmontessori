@@ -8,7 +8,7 @@ var target = document.querySelector(".instafeed-2");
       userId: '3588773278',
       limit: '20',
       target: target,
-      template: '<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="hovereffect"><img class="responsive" src="{{image}}" style="width: 100%; height: auto;"><div class="overlay"><h2>{{caption}}</h2><p><a href="{{link}}">LINK HERE</a></p></div></div></div>',
+      template: '<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><div class="hovereffect"><a href="{{link}}"><img class="responsive" src="{{image}}" style="width: 100%; height: auto;"></a><a href="{{link}}"><div class="overlay"><h2>{{caption}}</h2></div></a></div></div>',
       useHttp: true,
       resolution: 'standard_resolution',
       success: function(data) {
