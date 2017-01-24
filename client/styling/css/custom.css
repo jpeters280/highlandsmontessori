@@ -1,5 +1,25 @@
-/*color scheme*/
 
+.welcome-message{
+font-family: 'Coming Soon', cursive;
+font-weight: bold;
+font-size: 6em;
+/*padding-top: 0px;
+margin-top: 0px;*/
+}
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 3em;
+  }
+}
+
+.full-banner{
+  width: 100%; 
+  height: auto;
+  /*padding-bottom: 0px;
+  margin-bottom: 0px;*/
+}
+
+/*color scheme*/
 .colorfy,
 .navbar-default .navbar-nav .open .dropdown-menu>li>a, 
 .navbar-default .navbar-nav .open .dropdown-menu {
