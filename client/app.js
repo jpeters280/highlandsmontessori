@@ -1,5 +1,5 @@
 var app = angular.module('app', ['ngRoute']);
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
 // Routes to load your new and edit pages with new and edit controllers attached to them!
     $routeProvider
     
@@ -39,6 +39,8 @@ app.config(function ($routeProvider) {
         templateUrl: '/partials/views/contactUs.html'
     })
 
+    
+
 
 
 // ------------------End Views
@@ -66,6 +68,8 @@ app.config(function ($routeProvider) {
     .otherwise({
         redirectTo: '/'
     });
+
+    $locationProvider.html5Mode(true);
 
     
 });
