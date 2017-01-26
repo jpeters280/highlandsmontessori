@@ -14,6 +14,9 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/ourStaff', {
         templateUrl: '/partials/views/ourStaff.html'
     })
+    .when('/dailySchedule', {
+        templateUrl: '/partials/views/dailySchedule.html'
+    })
     .when('/developmentalreadiness', {
         templateUrl: '/partials/views/developmentalReadiness.html'
     })
