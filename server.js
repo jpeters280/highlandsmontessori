@@ -14,7 +14,6 @@ app.use(bp.urlencoded({extended: false}));
 require('./server/config/db.js'); // this loads the db.js configuration files for connecting to database and loading models
 require('./server/config/routes.js')(app); // this loads and runs the routes files for backend route set up.
 app.use(function(req, res) {res.sendfile(__dirname + '/client/index.html');});
-
 app.listen( port, function() {
 	console.log( 'server running on port ' + port );
 });
