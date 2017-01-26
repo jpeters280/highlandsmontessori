@@ -4,11 +4,8 @@ var express  		= require( 'express' ), // this loads the express code from node-
     port     		= process.env.PORT || 8000, // this sets up my local host server port to 8000
     bp       		= require('body-parser'), // loaded from node-modules folder so that I can parse http requests
     app      		= express(); // creates an express application object, with all the methods and attributes attached.
-    router 			= express.Router();
 
 
-
-module.exports = router;
 app.use( express.static( path.join( root, 'client' ))); // this tells the application that the static files are in ./client
 app.use( express.static( path.join( root, 'node_modules' ))); // other static files in ./bower_components
 app.use( express.static( path.join( root, 'bower_components' )));
@@ -16,12 +13,8 @@ app.use(bp.json());
 app.use(bp.urlencoded({extended: false}));
 require('./server/config/db.js'); // this loads the db.js configuration files for connecting to database and loading models
 require('./server/config/routes.js')(app); // this loads and runs the routes files for backend route set up.
-router.use('/var/www/highlandsmontessori/', function (req, res, next) {
-
-res.render('index');
-
-});
 app.use(function(req, res) {res.sendfile(__dirname + '/client/index.html');});
+
 app.listen( port, function() {
 	console.log( 'server running on port ' + port );
 });
