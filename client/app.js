@@ -42,10 +42,6 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/partials/views/contactUs.html'
     })
 
-    
-
-
-
 // ------------------End Views
 
 // ------------------Friends
@@ -72,8 +68,10 @@ app.config(function ($routeProvider, $locationProvider) {
         redirectTo: '/'
     });
 
-    $locationProvider.html5Mode(true);
-
+    $locationProvider.html5Mode({
+                 enabled: true,
+                 requireBase: false
+          });
     
 });
 
