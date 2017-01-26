@@ -35,16 +35,15 @@
     <base href="/">
   </head>
   <body>
-    <header class="masthead">
+    <!-- <header class="masthead">
       <row>
-      <img class="col-xs-5 col-md-2" src="./../../images/logoSmall.png" alt="">
-      <div class="col-xs-7 col-md-10 text-right">
+      <div class="text-right">
       <a href="https://www.yelp.com/biz/highland-montessori-san-mateo" target="_blank" class="btn-social btn-yelp"><i class="fa fa-yelp"></i></a>
       <a href="https://www.facebook.com/HighlandMontessori/?fref=ts" target="_blank" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
       <a href="https://www.pinterest.com/highlandmont/" target="_blank" class="btn-social btn-pinterest"><i class="fa fa-pinterest"></i></a>
       </div>
       </row>
-    </header>
+    </header> -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container"> <!-- Brand and toggle get grouped for mobile display -->
         <div class="navbar-header">
@@ -54,11 +53,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Highland Montessori</a>
+          <a class="navbar-brand" href="/"><img class="navbar-brand " src="./../../images/logoSmall.png" alt=""></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarColapseable">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav text-right">
 
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown">About Us
@@ -96,9 +95,6 @@
                 <li>      
                   <a href="/developmentalreadiness">Developmental Readiness</a>
                 </li>
-                <!-- <li>      
-                  <a href="/programs">Programs</a>
-                </li>  -->
               </ul>
             </li>
 
@@ -118,7 +114,17 @@
               <a href="/contactus">Contact Us</a>
             </li>
 
-          </ul>   
+          </ul>
+          <div class="text-right">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <a href="https://www.yelp.com/biz/highland-montessori-san-mateo" target="_blank" class="btn-social btn-yelp btn-sm"><i class="fa fa-yelp"></i></a>
+              <a href="https://www.facebook.com/HighlandMontessori/?fref=ts" target="_blank" class="btn-social btn-facebook btn-sm"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.pinterest.com/highlandmont/" target="_blank" class="btn-social btn-pinterest btn-sm"><i class="fa fa-pinterest"></i></a>
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="SRQHD4GXH8VBA">
+              <a onclick="$(this).closest('form').submit();" target="_blank" class="btn-social btn-paypal btn-sm"><i class="fa fa-paypal"></i></a>
+            </form>
+          </div>
         </div> <!-- /.navbar-collapse -->
       </div> <!-- /.container -->
     </nav>
