@@ -39,7 +39,8 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: '/partials/views/curriculum.html'
     })
     .when('/contactus', {
-        templateUrl: '/partials/views/contactUs.html'
+        templateUrl: '/partials/views/contactUs.html',
+        controller: 'contactNewController'
     })
 
 // ------------------End Views
@@ -48,19 +49,19 @@ app.config(function ($routeProvider, $locationProvider) {
 
     // .when('/', {
     //     templateUrl: '/partials/index.html',
-    //     controller: 'indexController'
+    //     controller: 'friendIndexController'
     // })
     // .when('/friends/:id/edit', {
     //     templateUrl: '/partials/edit.html',
-    //     controller: 'editController',
+    //     controller: 'friendEditController',
     // })
     // .when('/friends/new', {
     //     templateUrl: '/partials/new.html',
-    //     controller: 'newController',
+    //     controller: 'friendNewController',
     // })
     // .when('/friends/:id', {
     //     templateUrl: '/partials/show.html',
-    //     controller: 'showController',
+    //     controller: 'friendShowController',
     // })
 
 // ------------------End Friends

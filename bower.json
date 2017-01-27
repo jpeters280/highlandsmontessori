@@ -9,6 +9,6 @@
   "homepage": "https://github.com/jpeters280/highlandsmontessori",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "instafeed.js": "^1.4.1"
+    "instafeed.js": "^1.4.1"   
   }
 }

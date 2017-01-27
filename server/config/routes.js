@@ -1,4 +1,5 @@
-var friendsController = require('../controllers/friends.js')
+var friendsController = require('../controllers/friends.js');
+var contactsController = require('../controllers/contacts.js')
 
 console.log("future routes loading");
 
@@ -8,5 +9,12 @@ module.exports = function(app){
 	app.post("/friends", friendsController.create); // create a new friend
 	app.put("/friends/:id", friendsController.update); // update a friend info
 	app.delete("/friends/:id", friendsController.delete); // delete a friend
+
+	// app.get("/contacts", contactsController.index); // show all contacts
+	// app.get("/contacts/:id", contactsController.show); // show one contact
+	app.post("/contacts", contactsController.create); // create a new contact
+	// app.put("/contacts/:id", contactsController.update); // update a contact info
+	// app.delete("/contacts/:id", contactsController.delete); // delete a contact
+
+
 }
-// this adds route listeners to friends for 5 of 7 RESTful routes, excluding new and edit
