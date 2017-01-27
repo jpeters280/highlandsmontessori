@@ -18,6 +18,7 @@
     "googleapis": "^15.0.0",
     "instafeed.js": "^1.4.1",
     "nodemailer": "latest",
+    "nodemailer-mailgun-transport": "latest",
     "mongoose": "^4.6.1"
   }
 }
