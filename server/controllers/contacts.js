@@ -1,21 +1,22 @@
+console.log("entering contacts controller");
 var nodemailer      = require('nodemailer');
 var transporter     = nodemailer.createTransport({
         service: 'Hotmail',
         auth: {
             user: 'translucentduck@hotmail.com', // Your email id
-            pass:  '1' // Your password
+            pass: '1' // Your password
         }
     });
 
 module.exports = {
     create: function(req, res) {
         var newcontact = req.body;
-
         transporter.sendMail(
         	{ 	from: 'translucentduck@hotmail.com',
+                replyTo: newcontact.email,
                 to: 'jpeters280@gmail.com',
                 subject: newcontact.subject,
-                text: 'from: ' + newcontact.firstName + ' ' + newcontact.lastName + ' @ ' + newcontact.email + "\r\n\r\n" + newcontact.message
+                text: 'from: ' + newcontact.firstName + ' ' + newcontact.lastName + "\r\n" + 'email: ' + newcontact.email + "\r\n" + 'Phone Number: ' + newcontact.phoneNumber + "\r\n\r\n" + newcontact.message
             },
             function(err){
                 if(err)
