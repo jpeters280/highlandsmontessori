@@ -1,5 +1,3 @@
-console.log("mongo connection, mongoose setup");
-
 var mongoose = require('mongoose');
 // require file-system so that we can load, read, require all of the model files
 var fs = require('fs');
@@ -10,7 +8,7 @@ var reg = new RegExp(".js$", "i");
 // dir where our models are located
 var models_path = __dirname + "/../models";
 
-var dbURI = 'mongodb://localhost/friendsDB';
+var dbURI = 'mongodb://localhost/{{modelname}}';
 mongoose.connect(dbURI);
 
 // Connection events
@@ -36,16 +34,10 @@ process.on("SIGINT", function(){
 	});
 });
 
-// read ll teh files in the model directory and check if it is a javascript file before requiring it.
+// read all the files in the model directory and check if it is a javascript file before requiring it.
 
 fs.readdirSync(models_path).forEach(function(file){
 	if(file.indexOf('.js') > 0) {
 		require(models_path + '/' + file);
 	}
 })
-// another way using the regular expression
-// fs.readdirSync( models_path ).forEach( function( file ) {
-//   if( reg.test( file ) ) {
-//     require( path.join( models_path, file ) );
-//   }
-// });

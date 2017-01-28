@@ -45,26 +45,6 @@ app.config(function ($routeProvider, $locationProvider) {
 
 // ------------------End Views
 
-// ------------------Friends
-
-    // .when('/', {
-    //     templateUrl: '/partials/index.html',
-    //     controller: 'friendIndexController'
-    // })
-    // .when('/friends/:id/edit', {
-    //     templateUrl: '/partials/edit.html',
-    //     controller: 'friendEditController',
-    // })
-    // .when('/friends/new', {
-    //     templateUrl: '/partials/new.html',
-    //     controller: 'friendNewController',
-    // })
-    // .when('/friends/:id', {
-    //     templateUrl: '/partials/show.html',
-    //     controller: 'friendShowController',
-    // })
-
-// ------------------End Friends
     .otherwise({
         redirectTo: '/'
     });

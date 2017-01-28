@@ -11,7 +11,7 @@ app.use( express.static( path.join( root, 'node_modules' ))); // other static fi
 app.use( express.static( path.join( root, 'bower_components' )));
 app.use(bp.json());
 app.use(bp.urlencoded({extended: false}));
-require('./server/config/db.js'); // this loads the db.js configuration files for connecting to database and loading models
+// require('./server/config/db.js'); // this loads the db.js configuration files for connecting to database and loading models
 require('./server/config/routes.js')(app); // this loads and runs the routes files for backend route set up.
 app.route('/*').get(function(req, res) { 
     return res.sendFile(path.join(__dirname, 'client/index.html')); 
