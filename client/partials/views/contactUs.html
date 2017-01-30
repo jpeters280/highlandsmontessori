@@ -11,6 +11,7 @@
 			<p>Please include your name and phone number, your child's name, age and gender, and the requested start date.</p>
 		</div>
 	</div>
+	<p class="text-right"><small><em>*Required field</em></small></p>
 	<form name="contactForm" ng-submit="create(contactForm.$valid)" novalidate>
 		<div class="row">
 			<div class="col-xs-12">
@@ -34,7 +35,7 @@
 
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="form-group" ng-class="{ 'has-error' : contactForm.phoneNumber.$invalid && !contactForm.phoneNumber.$pristine && contactForm.phoneNumber.$error.minlength">
+				<div class="form-group" ng-class="{ 'has-error' : contactForm.phoneNumber.$invalid && !contactForm.phoneNumber.$pristine && contactForm.phoneNumber.$error.minlength }">
 					<label for="phoneNumber">Mobile Number*:</label>
 					<input type="text" name="phoneNumber" class="form-control" ng-model="contact.phoneNumber" ng-minlength="7" required>
 					<p ng-show="contactForm.phoneNumber.$invalid && !contactForm.phoneNumber.$pristine" class="help-block error">Enter a valid phone number.</p>
@@ -43,7 +44,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine">
+				<div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
 					<label for="email">Email address*:</label>
 					<input type="email" name="email" class="form-control" ng-model="contact.email" required>
 					<p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block error">Enter a valid email.</p>
@@ -52,7 +53,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="form-group" ng-class="{ 'has-error' : contactForm.subject.$invalid && !contactForm.subject.$pristine">
+				<div class="form-group" ng-class="{ 'has-error' : contactForm.subject.$invalid && !contactForm.subject.$pristine }">
 					<label for="subject">Subject*:</label>
 					<input type="text" name="subject" class="form-control" ng-model="contact.subject" required>
 					<p ng-show="contactForm.subject.$invalid && !contactForm.subject.$pristine" class="help-block error">Please enter a subject.</p>
@@ -61,13 +62,14 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine">
+				<div class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
 					<label for="message">Comment*:</label>
 					<textarea class="form-control" name="message" rows="5" ng-model="contact.message" required></textarea>
 					<p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block error">Please enter a message.</p>
 				</div>
 			</div>
 		</div>
+		<input type="text" name="address" class="form-control" ng-model="contact.address">
 		<div class="row">
 				<button ng-click="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">Submit</button>	
 		</div>
