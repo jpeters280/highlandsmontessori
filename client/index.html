@@ -180,6 +180,13 @@
 
   <!-- SCRIPT PLACED FOR SPEED -->
   <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).on('click','.navbar-collapse.in',function(e) {
+      if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+      }
+    });
+  </script>
   <!-- END SCRIPT PLACED FOR SPEED -->
 
 </html>

@@ -288,7 +288,8 @@ body {
 
 
 /*Honeypot*/
-input[name="address"] { 
+.contactForm > label[for="address"],
+.contactForm > input[name="address"] { 
   display: none; 
 }
 /*end Honeypot*/
