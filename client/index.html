@@ -65,7 +65,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><img class="navbar-brand " src="./../../images/logoSmall1.png" alt=""></a>
+          <a class="navbar-brand" href="/"><img class="navbar-brand " src="./../../images/logoSmall.png" alt=""></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarColapseable">
@@ -147,7 +147,7 @@
     <footer class="page-row colorfy">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-4 text-center">
+          <div class="hidden-xs hidden-sm col-md-4 text-center">
             <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FLos_Angeles" style="border:0; height: 340px; padding-top: 20px;" frameborder="0" scrolling="no"></iframe>
           </div>
           <div class="col-xs-12 col-md-4 text-center">
@@ -169,7 +169,7 @@
             </form>
           </div>
 
-          <div class="col-xs-12 col-md-4 text-center">
+          <div class="hidden-xs hidden-sm col-md-4 text-center">
             <iframe style="border:0; height: 340px; padding-top: 20px;" src="https://www.google.com/maps/embed/v1/place?q=614+Highland+Avenue+San+Mateo,+CA+94401&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
           </div>
         </div> <!-- END ROW -->
@@ -180,6 +180,7 @@
 
   <!-- SCRIPT PLACED FOR SPEED -->
   <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- THIS CLOSES THE COLAPSED NAVBAR UPON SELECTING AN OPTION -->
   <script type="text/javascript">
     $(document).on('click','.navbar-collapse.in',function(e) {
       if( $(e.target).is('a') ) {
@@ -187,6 +188,7 @@
       }
     });
   </script>
+  <!-- END THIS CLOSES THE COLAPSED NAVBAR UPON SELECTING AN OPTION -->
   <!-- END SCRIPT PLACED FOR SPEED -->
 
 </html>

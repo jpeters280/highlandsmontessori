@@ -23,9 +23,6 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/admissionsprocess', {
         templateUrl: '/partials/views/admissionsProcess.html'
     })
-    .when('/programs', {
-        templateUrl: '/partials/views/programs.html'
-    })
     .when('/photos', {
         templateUrl: '/partials/views/photos.html'
     })
