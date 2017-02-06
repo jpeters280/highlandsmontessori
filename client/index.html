@@ -141,7 +141,7 @@
       </div> <!-- /.container -->
     </nav>
     <main class="page-row page-row-expanded">
-      <div ng-view></div>
+      <div ng-view autoscroll="true"></div>
     </main>
     <br>
     <footer class="page-row colorfy">
@@ -186,6 +186,9 @@
       if( $(e.target).is('a') ) {
         $(this).collapse('hide');
       }
+    });
+    $(document).on('click','.navbar-brand',function(e) {
+        $('.navbar-collapse').collapse('hide');
     });
   </script>
   <!-- END THIS CLOSES THE COLAPSED NAVBAR UPON SELECTING AN OPTION -->
